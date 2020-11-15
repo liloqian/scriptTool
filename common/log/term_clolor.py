@@ -1,5 +1,7 @@
-from common.log.color_constants import *
+#!/usr/bin/python3
 import os
+
+from common.log.color_constants import ForegroundColor, Mode, BackgroundColor
 
 
 def get_normal(string):

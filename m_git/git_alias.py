@@ -10,4 +10,3 @@ str_gp = "git push origin HEAD:%s"
 str_gs = "git status"
 
 str_gc = "git co %s"
-

@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+import sys
+
+from common.command.shell_command import shell_with_green
+from m_git.git_alias import str_gl
+
+
+def gl(oneline=None, glg=None, author=None):
+    option = [' ', ' ', ' ']
+    if oneline is not None:
+        option[0] = '--oneline'
+    if glg is not None:
+        option[1] = "--stat --color"
+    if author is not None:
+        option[2] = "--author=%s" % author
+    shell_with_green(str_gl % (option[0], option[1], option[2]))
+
+
+if __name__ == '__main__':
+    oneline = None
+    glg = None
+    author = None
+    for arg in sys.argv:
+        if arg.lower() == 'o':
+            oneline = True
+        elif arg.lower() == 'g':
+            glg = True
+        elif arg.lower().startswith('a'):
+            author = arg[1:]
+    gl(oneline, glg, author)

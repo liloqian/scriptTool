@@ -1,4 +1,10 @@
-from common.log.term_clolor import *
+#!/usr/bin/python3
+import os
+
+from common.log.term_clolor import ForegroundColor, Mode
+from common.log.term_clolor import get_color_text
+from common.log.term_clolor import get_red_bold, get_red_normal
+from common.log.term_clolor import get_yellow_bold, get_yellow_normal
 
 
 def shell(string):
@@ -39,5 +45,5 @@ def popen_shell(string):
 
 
 if __name__ == '__main__':
-    popen_shell("cat shell_command.py")
+    shell_with_yellow("cat shell_command.py")
     system_shell("cat shell_command.py")
