@@ -29,6 +29,7 @@ sourceAllShell() {
     # shellcheck disable=SC1090
     source $shell_name && echo "source  $shell_name..."
   done
+  cd $OLDPWD || exit
 }
 
 # init do something :)
